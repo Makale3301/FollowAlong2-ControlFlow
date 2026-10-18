@@ -24,8 +24,15 @@ public class Challenge {
     //   canPlay(true, true, 21)    → false   too late
     //   canPlay(true, false, 7)    → false   too early
     public static boolean canPlay(boolean homeworkDone, boolean isWeekend, int hour) {
-        return false;   // YOUR CODE — use && and ||
+
+        // Checks my homework, the weekend, and the time
+        if ((homeworkDone || isWeekend) && hour >= 8 && hour < 21) {
+            return true;
+        } else {
+            return false;
+        }
     }
+
 
     // Problem 2 — digitCount
     // Return how many digits n has. n is never negative. 0 has 1 digit.
@@ -39,6 +46,20 @@ public class Challenge {
     // Hint: n / 10 chops off the last digit. 12345 / 10 is 1234.
     // Use a while loop that keeps chopping and counts how many times.
     public static int digitCount(int n) {
-        return 0;   // YOUR CODE — use a while loop
+        // Starts the count at one because 0 has one digit
+        int count = 1;
+
+        // Keeps counting while the number has more digits
+        while (n >= 10) {
+
+            // Removes the last digit
+            n = n / 10;
+
+            // Adds one to my count
+            count++;
+        }
+
+        // Gives back the number of digits
+        return count;
     }
 }

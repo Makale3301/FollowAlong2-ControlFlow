@@ -15,5 +15,23 @@ package part06;
 //    saying in YOUR OWN WORDS what that line does. The README shows an example.
 
 public class IfStatements {
+    public static void main(String[] args) {
+            // My age
+            int age = 13;
+            // Checks if age is 75 or older
+            if (age >= 75) {
+                System.out.println("OK boomer!");
+                // Checks if age is 18 or older
+            } else if (age >= 18) {
+                System.out.println("You are an adult!");
+                // Checks if age is 13 or older
+            } else if (age >= 13) {
+                System.out.println("You are a teenager!");
+                // If none of those are true
+            } else {
+                System.out.println("You are not an adult!");
 
+            }
+
+        }
 }

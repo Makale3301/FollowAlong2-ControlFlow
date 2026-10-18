@@ -8,7 +8,8 @@ package part09;
 //
 // Each method already has its top line. The inputs are in the parentheses.
 // Replace the line marked YOUR CODE so the method returns the right answer.
-
+import java.util.Random;
+import java.util.Scanner;
 public class Challenge {
 
     // The price of a movie ticket, in dollars.
@@ -21,7 +22,26 @@ public class Challenge {
     // ticketPrice(19, true)  should return 7
     // ticketPrice(30, false) should return 10
     public static int ticketPrice(int age, boolean student) {
-        return 0;   // YOUR CODE
+
+        // Kids under 5 get in free
+        if (age < 5) {
+            return 0;
+        }
+
+// People 65 and older pay 5
+        else if (age >= 65) {
+            return 5;
+        }
+
+// Students pay 7
+        else if (student) {
+            return 7;
+        }
+
+// Everyone else pays 10
+        else {
+            return 10;
+        }
     }
 
     // The letter grade for a score.
@@ -31,6 +51,31 @@ public class Challenge {
     // letterGrade(80) should return "B"
     // letterGrade(59) should return "F"
     public static String letterGrade(int score) {
-        return "";   // YOUR CODE
+
+        // 90 and up is an A
+        if (score >= 90) {
+            return "A";
+        }
+
+// 80 and up is a B
+        else if (score >= 80) {
+            return "B";
+        }
+
+// 70 and up is a C
+        else if (score >= 70) {
+            return "C";
+        }
+
+// 60 and up is a D
+        else if (score >= 60) {
+            return "D";
+        }
+
+// Anything lower is an F
+        else {
+            return "F";
+        }
+
     }
 }

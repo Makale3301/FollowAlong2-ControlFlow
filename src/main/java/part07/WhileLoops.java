@@ -15,7 +15,24 @@ package part07;
 //    saying in YOUR OWN WORDS what that line does.
 //
 // If your program never stops: click the red square (Stop) in the Run window.
-
+import java.util.Scanner;
 public class WhileLoops {
+    public static void main(String[] args) {
+        // Lets me type answers
+        Scanner scanner = new Scanner(System.in);
+        // Keeps track of my answer
+        String name = "";
+        // Keeps asking until I enter my name
+        while (name.isBlank()) {
+            // Asks for my name
+            System.out.println("Enter your name:");
+            // Saves my answer
+            name = scanner.nextLine();
+        }
+        // Prints my name
+        System.out.println("Hello " + name);
+        // Closes Scanner
+        scanner.close();
 
+    }
 }

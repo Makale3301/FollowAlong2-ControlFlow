@@ -22,7 +22,13 @@ public class Challenge {
     //   canCharge(20, false)  → false   not docked
     //   canCharge(0, true)    → true
     public static boolean canCharge(int battery, boolean docked) {
-        return false;   // YOUR CODE — use an if statement
+        // Checks if the robot is docked and battery is below 100
+        if (docked && battery < 100) {
+            return true;
+        } else {
+            return false;
+        }
+
     }
 
     // Problem 2 — dayType
@@ -36,6 +42,27 @@ public class Challenge {
     //   dayType(0)  → "invalid"
     //   dayType(9)  → "invalid"
     public static String dayType(int day) {
-        return "";   // YOUR CODE — use a switch
+
+        // Checks the day number
+        switch (day) {
+
+            // Monday through Friday
+            case 1:
+            case 2:
+            case 3:
+            case 4:
+            case 5:
+                return "weekday";
+
+            // Saturday and Sunday
+            case 6:
+            case 7:
+                return "weekend";
+
+            // If the number is not a day
+            default:
+                return "invalid";
+        }
+
     }
 }
